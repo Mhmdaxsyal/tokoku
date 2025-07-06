@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toko Online Sederhana</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Toko Online Axsyal</h1>
+    <button onclick="lihatKeranjang()">🛒 Keranjang (<span id="jumlah">0</span>)</button>
+  </header>
+
+  <section id="produk-container">
+    <!-- Produk akan dimuat via JS -->
+  </section>
+
+<div id="keranjang" class="modal">
+  <h2>Keranjang Belanja</h2>
+  <ul id="daftar-keranjang"></ul>
+  <button onclick="checkout()">Checkout via WhatsApp</button>
+  <button onclick="tutupKeranjang()">Tutup</button>
+</div>
+
+  <script src="script.js">
+    card.innerHTML = `
+  <img src="${item.gambar}" style="width:100%; border-radius:8px;" />
+  <h3>${item.nama}</h3>
+  <p>Rp ${item.harga.toLocaleString()}</p>
+  <button onclick="tambahKeKeranjang(${item.id})">Beli</button>
+`;
+  </script>
+</body>
+</html>
