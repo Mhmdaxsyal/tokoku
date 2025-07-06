@@ -41,12 +41,6 @@ function lihatKeranjang() {
 function tutupKeranjang() {
   document.getElementById("keranjang").style.display = "none";
 }
-card.innerHTML = `
-  <img src="${item.gambar}" style="width:100%; border-radius:8px;" />
-  <h3>${item.nama}</h3>
-  <p>Rp ${item.harga.toLocaleString()}</p>
-  <button onclick="tambahKeKeranjang(${item.id})">Beli</button>
-`;
 
 tampilkanProduk();
 
